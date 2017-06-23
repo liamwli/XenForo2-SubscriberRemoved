@@ -1,0 +1,38 @@
+{
+    "option.sv_subscriberremoved_thread_data.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "1ad7f512d4f0131237a5e35de00266b9"
+    },
+    "option_explain.sv_subscriberremoved_thread_data.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "option_group.SV_SubscriberRemoved.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "2540fdb2026b58bc755663db2550fd00"
+    },
+    "option_group_description.SV_SubscriberRemoved.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "sv_subscriberremoved_create_thread.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "1ad7f512d4f0131237a5e35de00266b9"
+    },
+    "sv_subscriberremoved_thread_author.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "498497a426e4abdb76f385a477aa0a07"
+    }
+}
