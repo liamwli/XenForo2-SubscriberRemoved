@@ -8,14 +8,20 @@ class SubscriberRemovedCreateThread extends AbstractOption
 {
 	public static function renderOption(\XF\Entity\Option $option, array $htmlParams)
 	{
+		$selectData = self::getSelectData($option, $htmlParams);
+
+		$select = self::getTemplater()->formSelect(
+			$selectData['controlOptions'], $selectData['choices']
+		);
+
 		return self::getTemplate('sv_subscriberremoved_option_template_thread_data', $option, $htmlParams, [
-			'nodes' => self::getSelectNodeChoices()
+			'nodeSelect' => $select
 		]);
 	}
 
 	public static function verifyOption(array &$threadData, \XF\Entity\Option $option)
 	{
-		if ($threadData['create_thread'])
+		if (isset($threadData['create_thread']))
 		{
 			$threadAuthor = \XF::finder('XF:User')->where('username', $threadData['thread_author'])->fetchOne();
 
@@ -30,7 +36,7 @@ class SubscriberRemovedCreateThread extends AbstractOption
 		return true;
 	}
 
-	protected static function getSelectNodeChoices()
+	protected static function getSelectData(\XF\Entity\Option $option, array $htmlParams)
 	{
 		/** @var \XF\Repository\Node $nodeRepo */
 		$nodeRepo = \XF::repository('XF:Node');
@@ -43,7 +49,12 @@ class SubscriberRemovedCreateThread extends AbstractOption
 			return $v;
 		}, $choices);
 
-		return $choices;
+		return [
+			'choices' => $choices,
+			'controlOptions' => [
+				'name' => $htmlParams['inputName'] . '[node_id]',
+				'value' => $option->option_value['node_id']
+			]
+		];
 	}
-
 }

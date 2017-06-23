@@ -1,11 +1,14 @@
 <xf:checkboxrow label="{$option.title}" hint="{$editHtml}">
 
-    <xf:option name="{$inputName}[create_thread]" value="1" label="{{ phrase('sv_subscriberremoved_create_thread') }}" checked="{$option.option_value.create_thread}">
-        <xf:textbox name="{$inputName}[thread_author]" value="{$option.option_value.thread_author}" placeholder="{{ phrase('sv_subscriberremoved_thread_author') }}" />
+    <xf:option name="{$inputName}[create_thread]" value="1" label=""
+               checked="{$option.option_value.create_thread}">
+        <xf:textbox name="{$inputName}[thread_author]" value="{$option.option_value.thread_author}"
+                    placeholder="{{ phrase('sv_subscriberremoved_thread_author') }}"/>
 
-        <xf:select name="{$inputName}[node_id]" value="{$option.option_value.node_id}" placeholder="{{ phrase('sv_subscriberremoved_forum') }}">
-            <xf:options source="$nodes" />
-        </xf:select>
+        <xf:html>{$nodeSelect|raw}</xf:html>
     </xf:option>
+
+    <xf:explain>{$explainHtml}</xf:explain>
+    <xf:html>{$listedHtml}</xf:html>
 
 </xf:checkboxrow>
