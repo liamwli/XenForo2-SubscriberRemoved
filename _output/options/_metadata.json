@@ -1,4 +1,7 @@
 {
+    "sv_slowquery_log_threshold.json": {
+        "hash": "d2b8cf3d3bf941a062e39dcc13a6f880"
+    },
     "sv_subscriberremoved_conversation_data.json": {
         "hash": "5ed4933d4ff295e4fcf4ac8a919eb501"
     },
